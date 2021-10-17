@@ -12,7 +12,7 @@ const { search, countriesMarkup } = refs;
 const newsApiService = new NewsApiService();
 
 function searchInput(e) {
-    
+    // console.log(newsApiService.query.length);
     newsApiService.query = e.target.value;
    
     if (newsApiService.query === ' ') {

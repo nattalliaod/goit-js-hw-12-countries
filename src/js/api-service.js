@@ -54,8 +54,6 @@ export default class NewsApiService {
     else if (countries.length === 1) {
         countriesMarkup.innerHTML = previewCountryTpl(...countries);
     }
-    else if (this.query.length < 2 && this.query === " ")
-        return;
 
     };
 
