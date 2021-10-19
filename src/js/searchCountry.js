@@ -15,20 +15,21 @@ const { search, countriesMarkup } = refs;
 const newsApiService = new NewsApiService();
 
 function searchInput(e) {
-
-    newsApiService.query = e.target.value;
-    if (newsApiService.query === ' ') {
+   clearContainer()
+    
+  newsApiService.query = e.target.value;
+    if (newsApiService.query.length < 1 || newsApiService.query === ' ') {
         return  notice({
             text: 'enter your query',
             delay: 3000,
         }) ;
     }
-   
+  
   newsApiService.fetchCountries()
     .then(dataShow)
     .catch(errorInfo);
       
-  clearContainer()
+
 
 };
 

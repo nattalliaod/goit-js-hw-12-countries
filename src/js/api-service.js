@@ -5,28 +5,29 @@ export default class NewsApiService {
     this.searchQuery = '';
 
   }
-    fetchCountries() {
-        const url = `${BASE_URL}/${this.searchQuery}`;
-    
-        return fetch(url)
-            .then(response => response.json())
-            // .then(data => {
-            //     return data
-            // })
-     
-              
-    }
-    
-      
-    get query() {
-    return this.searchQuery;
-    }
+  fetchCountries() {
+    const url = `${BASE_URL}/${this.searchQuery}`;
 
-    set query(newQuery) {
+    return fetch(url)
+      .then(response => response.json())
+      // .then(data => {
+      //   return data
+      // })
+      
+     
+
+
+  }
+
+
+  get query() {
+    return this.searchQuery;
+  }
+
+  set query(newQuery) {
     this.searchQuery = newQuery;
   }
 
-    
-} 
 
- 
+}
+
